@@ -1,9 +1,8 @@
 {
   "info": {
-    "loop": true,
-    "audioBetween": "test.dfpwm"
+    "loop": true
   },
   "programming": [
-    "gabe.dfpwm"
+    {"title": "Daily Gabe the Doggo", "file": "gabe.dfpwm"}
   ]
 }
