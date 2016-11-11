@@ -1,0 +1,9 @@
+{
+  "info": {
+    "loop": true,
+    "audioBetween": "test.dfpwm"
+  },
+  "programming": [
+    "gabe.dfpwm"
+  ]
+}
