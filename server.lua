@@ -27,7 +27,7 @@ modem.open(56)
 
 while isRunning do
   for _, v in pairs(prog.programming) do
-    programf = io.open(v.file, "rb")
+    programf = io.open("dfpwm/" .. v.file, "rb")
     program = programf:read("*all")
     programf:close()
 
@@ -35,8 +35,8 @@ while isRunning do
       chunk = program.sub(((i-1)*CHUNKSIZE)+1, i*CHUNKSIZE)
       modem.broadcast(PORT, v.title, chunk)
       os.sleep(0.5)
+      print("Sending chunk " .. tostring(i) .. " of file " .. v)
     end
   end
-
   if not prog.info.loop then isRunning = false end
 end
